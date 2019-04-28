@@ -3,18 +3,27 @@
  */
 
 /* Styling for HTML elements */
+html {
+  background: url(image/image.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+
 body {
   padding: 0;
   margin: 0;
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 18px;
+  font-size: 25px;
   line-height: 150%;
-  color: #333;
-  background: #efeee7;
-}
+  color:black;
+  }
 
 header {
-  background: #333;
+  background:transparent;
 }
 
 h1 {
@@ -22,7 +31,6 @@ h1 {
   margin: 0;
   margin-bottom: 20px;
   font-size: 28px;
-  color: #eee;
   text-align: center;
 }
 
@@ -53,7 +61,7 @@ a {
 
 #bio-name {
   position: absolute;
-  top: 150px;
+  top: 220px;
   left: 30px;
 }
 
@@ -66,7 +74,7 @@ a {
 }
 
 #bio-image {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   margin-right: 20px;
 }
