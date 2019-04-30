@@ -1,0 +1,117 @@
+html {
+    background: url(images/image.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: turquoise;
+
+div.work {
+    background: url(images/image.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+    }
+  
+  }
+  .container {
+      background-color: turquoise;
+      background: url(Images/image.jpg) center center cover no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+  }
+  body {
+    background: url(Images/image.jpg) center center cover no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: turquoise;
+  }
+  h1.intro{
+    position: relative;
+    top: 10%;
+    text-align: center;
+    background-color: turquoise;
+    background: url(Images/image.jpg) center center cover no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#intro {
+    position:relative;
+    top: 20%;
+    text-align: center;
+    background-color: turquoise;
+    background: url(Images/image.jpg) center center cover no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#header {
+    position:absolute;
+    top: 20%;
+    text-align: right;
+}
+
+p.description {
+    position:relative;
+    top: 5%;
+    text-align: left;
+    font-size: 18px;
+    margin: 10%;
+}
+
+
+figcaption.caption {
+    text-align: center;
+    font-size: 24px;
+    color:teal;
+    font-weight: bold;
+}
+
+#comp_note{
+    left:10%;
+}
+
+#CityData {
+    position:absolute;
+    top: 20%;
+    left:25%;
+}
+
+
+#bot_header{
+    position:absolute;
+    top: 20%;
+    left:26%;
+    text-align: right;
+}
+
+#bottom_visual {
+    position:absolute;
+    bottom: -150;
+    right: 15%;
+}
+
+#bottom_visual_page{
+    position:relative;
+    width: 100%;
+    bottom: 5px;
+}
+
+#bottom_space_data_pg{
+    position: relative;
+    width: 100%;
+    bottom: 5px;
+    background:rgb(255, 255, 255);
+}
