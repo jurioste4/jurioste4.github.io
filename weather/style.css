@@ -5,21 +5,19 @@ html {
     -o-background-size: cover;
     background-size: cover;
     background-color: turquoise;
-
-div.work {
-    background: url(images/image.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+}
+h1 {
+    background-color:black;
+    color: blue;
+    
 }
 
-    }
+   
   
-  }
+  
   .container {
-      background-color: turquoise;
-      background: url(Images/image.jpg) center center cover no-repeat fixed;
+      
+    background: url(Images/image.jpg) center center cover no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -38,12 +36,13 @@ div.work {
     position: relative;
     top: 10%;
     text-align: center;
-    background-color: turquoise;
+    background-color: black;
     background: url(Images/image.jpg) center center cover no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    color: blue;
 }
 
 #intro {
