@@ -35,14 +35,25 @@ h1 {
   margin-bottom: 20px;
   font-size: 28px;
   text-align: center;
+  color: black;
 }
+
+p.description {
+  position:relative;
+  top: 5%;
+  text-align: left;
+  font-size: 18px;
+  margin: 10%;
+}
+
 
 h2 {
   font-size: 24px;
+  color: black;
 }
 
 a {
-  color: #d21034;
+  color:black;
 }
 
 /* Selecting elements by class */
@@ -56,6 +67,7 @@ a {
 #contact-info,
 #bio-image {
   float: left;
+  color: black;
 }
 
 #figure {
