@@ -68,7 +68,7 @@ h1.intro{
       
 }
 
-#intro {
+/* #intro {
   position:relative;
   top: 20%;
   text-align: center;
@@ -79,7 +79,7 @@ h1.intro{
   border-width: 5px;
   border-color:red;
 }
-#header {
+#header { */
   position:absolute;
   top: 20%;
   text-align: right;
