@@ -9,6 +9,14 @@
 #contact-info {
   float: left;
 }
+
+#left {
+  float: left;
+}
+
+#right {
+  float: right;
+}
 img.bg {
   /* Set rules to fill background */
   min-height: 100%;
@@ -42,7 +50,7 @@ img.center {
   margin-left: auto;
   margin-right: auto;
   }  
-
+  
 
 #test {
   background-color: black;
@@ -51,7 +59,15 @@ img.center {
   border-width: 5px;
   border-color:red;
 }
- 
+div.mt-3col-md-6 {
+
+  color: black;
+  text-shadow: 0px 2px 2px #fff;
+
+}
+
+
+
 body {
   padding:0;
   margin:0;
@@ -59,10 +75,10 @@ body {
  
 }
 h1.intro{
-    top: 10%;
+  top: 10%;
   text-align: center;
-  background-color: black;
-  color: white;
+  background-color: transparent;
+  color: black;
   
   
       
@@ -72,14 +88,9 @@ h1.intro{
   position:relative;
   top: 20%;
   text-align: center;
-  background-color: turquoise;
-  background-color: black;
-  color: white;
-  border-style: solid;
-  border-width: 5px;
-  border-color:red;
-}
-#header { */
+ 
+} */
+#header {
   position:absolute;
   top: 20%;
   text-align: right;
@@ -87,15 +98,14 @@ h1.intro{
 
 p.description {
   position:relative;
-  top: 5%;
+  top: 2%;
   text-align: left;
-  font-size: 18px;
-  margin: 10%;
-  background-color: black;
-  color: white;
-  border-style: solid;
-  border-width: 5px;
-  border-color:  red;
+  font-size: 25px;
+  margin: 5%;
+  background-color: transparent;
+  color: #000;
+  text-shadow: 0px 1px 1px #fff;
+ 
 }
 
 
