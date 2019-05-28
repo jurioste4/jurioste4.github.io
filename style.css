@@ -6,6 +6,36 @@
     background-size: cover;
     
 } */
+
+button.btn {
+  /* font-size: 25px;
+  color: #000; */
+  display: block;
+  background-color: black;
+  margin: 0 auto;
+  padding: 0;
+  display: table-cell;
+  color:white;
+
+  width: 100px;
+  height: 40px;
+  text-align: center;
+}
+.btn-group{
+display: block;
+background-color: black;
+color: white;
+margin: 0 auto;
+padding: 0;
+display: table-cell;
+
+
+}
+.btgn {
+  display: block;
+  background-color: black;
+  color: white;
+}
 #contact-info {
   float: left;
 }
@@ -108,13 +138,16 @@ p.description {
  
 }
 
+a {
+  color: whitesmoke;
+}
 
-figcaption.caption {
+/* figcaption.caption {
   text-align: center;
   font-size: 24px;
   color:teal;
   font-weight: bold;
-}
+} */
 
 #comp_note{
   left:10%;
