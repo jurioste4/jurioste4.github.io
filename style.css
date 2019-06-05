@@ -8,111 +8,105 @@
 } */
 
 button.btn {
-  /* font-size: 25px;
+    /* font-size: 25px;
   color: #000; */
-  display: block;
-  background-color: black;
-  margin: 0 auto;
-  padding: 0;
-  display: table-cell;
-  color:white;
-
-  width: 100px;
-  height: 40px;
-  text-align: center;
+    display: block;
+    background-color: black;
+    margin: 0 auto;
+    padding: 0;
+    display: table-cell;
+    color: white;
+    width: 100px;
+    height: 40px;
+    text-align: center;
 }
-.btn-group{
-display: block;
-background-color: black;
-color: white;
-margin: 0 auto;
-padding: 0;
-display: table-cell;
 
-
+.btn-group {
+    display: block;
+    background-color: black;
+    color: white;
+    margin: 0 auto;
+    padding: 0;
+    display: table-cell;
 }
+
 .btgn {
-  display: block;
-  background-color: black;
-  color: white;
+    display: block;
+    background-color: black;
+    color: white;
 }
+
 #contact-info {
-  float: left;
+    float: left;
 }
 
 #left {
-  float: left;
+    float: left;
 }
 
 #right {
-  float: right;
-}
-img.bg {
-  /* Set rules to fill background */
-  min-height: 100%;
-  min-width: 1024px;
-    
-  /* Set up proportionate scaling */
-  width: 100%;
-  height: auto;
-    
-  /* Set up positioning */
-  position: fixed;
-  top: 0;
-  left: 0;
+    float: right;
 }
 
-@media screen and (max-width: 1024px) { /* Specific to this particular image */
-  img.bg {
-    left: 50%;
-    margin-left: -512px;   /* 50% */
-  }
+img.bg {
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
 }
+
+@media screen and (max-width: 1024px) {
+    /* Specific to this particular image */
+    img.bg {
+        left: 50%;
+        margin-left: -512px;
+        /* 50% */
+    }
+}
+
 h1 {
-  position: center;
-  background-color: transparent;
-  color:black;
-  
+    position: center;
+    background-color: transparent;
+    color: black;
 }
+
 img.center {
-  
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  }  
-  
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 #test {
-  background-color: black;
-  color: white;
-  border-style: solid;
-  border-width: 5px;
-  border-color:red;
+    background-color: black;
+    color: white;
+    border-style: solid;
+    border-width: 5px;
+    border-color: red;
 }
+
 div.mt-3col-md-6 {
-
-  color: black;
-  text-shadow: 0px 2px 2px #fff;
-
+    color: black;
+    text-shadow: 0px 2px 2px #fff;
 }
-
-
 
 body {
-  padding:0;
-  margin:0;
- 
- 
+    padding: 0;
+    margin: 0;
 }
-h1.intro{
-  top: 10%;
-  text-align: center;
-  background-color: transparent;
-  color: black;
-  
-  
-      
+
+h1.intro {
+    top: 10%;
+    text-align: center;
+    background-color: transparent;
+    color: black;
 }
+
 
 /* #intro {
   position:relative;
@@ -120,27 +114,28 @@ h1.intro{
   text-align: center;
  
 } */
+
 #header {
-  position:absolute;
-  top: 20%;
-  text-align: right;
+    position: absolute;
+    top: 20%;
+    text-align: right;
 }
 
 p.description {
-  position:relative;
-  top: 2%;
-  text-align: left;
-  font-size: 25px;
-  margin: 5%;
-  background-color: transparent;
-  color: #000;
-  text-shadow: 0px 1px 1px #fff;
- 
+    position: relative;
+    top: 2%;
+    text-align: left;
+    font-size: 25px;
+    margin: 5%;
+    background-color: transparent;
+    color: #000;
+    text-shadow: 0px 1px 1px #fff;
 }
 
 a {
-  color: whitesmoke;
+    color: whitesmoke;
 }
+
 
 /* figcaption.caption {
   text-align: center;
@@ -149,9 +144,10 @@ a {
   font-weight: bold;
 } */
 
-#comp_note{
-  left:10%;
+#comp_note {
+    left: 10%;
 }
+
 
 /* #CityData {
   position:absolute;
