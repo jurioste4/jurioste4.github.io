@@ -9,6 +9,14 @@
     color: rgb(53, 40, 40);
 }
 
+#left {
+    float: left;
+}
+
+#right {
+    float: right;
+}
+
 body {
     background-color: rgb(50, 255, 245);
 }
