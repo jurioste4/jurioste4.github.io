@@ -8,6 +8,7 @@
     <!-- <link rel="stylesheet" href="reset.css">  -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="lightbox.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -43,27 +44,31 @@
                         <li><a href="html_pages/wprojects.html">web Projects</a></li>
                         <!-- <li><a href="#0" class="mobile-hide">Blog</a></li> -->
                         <li><a href="html_pages/jobh.html" class="active-link">Job History</a></li>
-                        <li><a href="../test.html">Home</a></li>
+                        <li><a href="../index.html">Home</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
         <main class="main-contents">
-            <h2>About</h2>
+            <h2>web based Projects</h2>
 
-            <p>I am from Albuquerque, New Mexico approximately 5 years ago my wife and I moved to Houston,
-                Texas to help take care of my mother and father in-law both were in there 80s ,I have always had a
-                natural curiosity and love to learn and study I am a nerd and proud of it.
-                I have a love of science fiction and fantasy as well as video games and I am a Coffee connoisseur.
-                </br>
-                </br>
-                I did prior to moving to Houston start School at Central New Mexico community collage for Networking
-                admin.
-                But we then moved after some time I was able to continue my schooling both at HCC and now at Rice
-                University bootcamp.
-                My goal is to keep gong to school and use this Bootcamp certificate to work as a data analyst and get my
-                bachelors.
+            <p>This Page displays my projects there are web based some were by design as they helped me learn different
+                aspects of data analytics and use different tools. Below there are projects that use:
+                JavaScript, HTML/CSS D3.js . and there are some Full stack projects that use all even python
             </p>
+
+            <ul>
+                <li><a href="../map_leaflet/index.html" target="_blank">Leaflet Web Maping</a></li>
+                <figure>
+                    <a href="../map_leaflet/index.html" target="_blank">
+                        <img src="../image/leaflet_map.jpg" alt="leaflet map of USA earthquakes" class="lightbox">
+                    </a>
+                </figure>
+                <p>Uses U.S. Geological Survey (USGS) site, the USGS provides earthquake data in different formats,
+                    updated every 5 minutes. I Created a map using Leaflet that plots the earthquakes from data set
+                    based
+                    on their longitude and latitude.</p>
+            </ul>
 
 
 
@@ -72,6 +77,7 @@
     </div>
 
     <script src="nav.js" async defer></script>
+    <script src="lightbox.js"></script>
 </body>
 
 </html>
