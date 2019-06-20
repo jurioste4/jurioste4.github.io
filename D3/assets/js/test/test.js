@@ -1,35 +1,37 @@
-let svgWidth = 960;
-let svgHeight = 500;
+var svgWidth = 960;
+var svgHeight = 500;
 
-let margin = {
+var margin = {
     top: 20,
     right: 40,
-    bottom: 60,
+    bottom: 80,
     left: 100
 };
 
-let width = svgWidth - margin.left - margin.right;
-let height = svgHeight - margin.top - margin.bottom;
+var width = svgWidth - margin.left - margin.right;
+var height = svgHeight - margin.top - margin.bottom;
 
-
-let svg = d3.select("#scatter")
+// Create an SVG wrapper, append an SVG group that will hold our chart,
+// and shift the latter by left and top margins.
+var svg = d3
+    .select(".chart")
     .append("svg")
     .attr("width", svgWidth)
-    .attr("height", svgHeight)
+    .attr("height", svgHeight);
 
-
-
-let chartGroup = svg.append("g")
+// Append an SVG group
+var chartGroup = svg.append("g")
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
+// Initial Params
+var chosenXAxis = "hair_length";
 
-var chosenXAxis = "income";
-
-function xScale(chartdata, chosenXAxis) {
+// function used for updating x-scale var upon click on axis label
+function xScale(hairData, chosenXAxis) {
     // create scales
     var xLinearScale = d3.scaleLinear()
-        .domain([d3.min(chartdata, d => d[chosenXAxis]) * 0.8,
-        d3.max(chartdata, d => d[chosenXAxis]) * 1.2
+        .domain([d3.min(hairData, d => d[chosenXAxis]) * 0.8,
+        d3.max(hairData, d => d[chosenXAxis]) * 1.2
         ])
         .range([0, width]);
 
@@ -37,6 +39,7 @@ function xScale(chartdata, chosenXAxis) {
 
 }
 
+// function used for updating xAxis var upon click on axis label
 function renderAxes(newXScale, xAxis) {
     var bottomAxis = d3.axisBottom(newXScale);
 
@@ -47,6 +50,8 @@ function renderAxes(newXScale, xAxis) {
     return xAxis;
 }
 
+// function used for updating circles group with a transition to
+// new circles
 function renderCircles(circlesGroup, newXScale, chosenXaxis) {
 
     circlesGroup.transition()
@@ -55,23 +60,25 @@ function renderCircles(circlesGroup, newXScale, chosenXaxis) {
 
     return circlesGroup;
 }
+
+// function used for updating circles group with new tooltip
 function updateToolTip(chosenXAxis, circlesGroup) {
 
-    if (chosenXAxis === "income") {
-        var label = "income:";
+    if (chosenXAxis === "hair_length") {
+        var label = "Hair Length:";
     }
     else {
-        var label = "poverty";
+        var label = "# of Albums:";
     }
 
     var toolTip = d3.tip()
         .attr("class", "tooltip")
         .offset([80, -60])
         .html(function (d) {
-            return (`${d.state}<br>${label} ${d[chosenXAxis]}`);
+            return (`${d.rockband}<br>${label} ${d[chosenXAxis]}`);
         });
-    circlesGroup.call(toolTip);
 
+    circlesGroup.call(toolTip);
 
     circlesGroup.on("mouseover", function (data) {
         toolTip.show(data);
@@ -84,73 +91,82 @@ function updateToolTip(chosenXAxis, circlesGroup) {
     return circlesGroup;
 }
 
+// Retrieve data from the CSV file and execute everything below
+d3.csv("hairData.csv", function (err, hairData) {
+    if (err) throw err;
 
-
-d3.csv("./assets/data/data.csv").then(function (chartdata) {
-    chartdata.forEach(function (data) {
-        data.income = +data.income;
-        data.poverty = +data.poverty;
-        data.healthcare = +data.healthcare;
+    // parse data
+    hairData.forEach(function (data) {
+        data.hair_length = +data.hair_length;
+        data.num_hits = +data.num_hits;
+        data.num_albums = +data.num_albums;
     });
 
-    var xLinearScale = xScale(chartdata, chosenXAxis);
+    // xLinearScale function above csv import
+    var xLinearScale = xScale(hairData, chosenXAxis);
 
+    // Create y scale function
     var yLinearScale = d3.scaleLinear()
-        .domain([0, d3.max(chartdata, d => d.healthcare)])
+        .domain([0, d3.max(hairData, d => d.num_hits)])
         .range([height, 0]);
 
+    // Create initial axis functions
     var bottomAxis = d3.axisBottom(xLinearScale);
     var leftAxis = d3.axisLeft(yLinearScale);
 
-
+    // append x axis
     var xAxis = chartGroup.append("g")
         .classed("x-axis", true)
         .attr("transform", `translate(0, ${height})`)
         .call(bottomAxis);
 
     // append y axis
+
     chartGroup.append("g")
         .call(leftAxis);
 
+    // append initial circles
     var circlesGroup = chartGroup.selectAll("circle")
-        .data(chartdata)
+        .data(hairData)
         .enter()
         .append("circle")
         .attr("cx", d => xLinearScale(d[chosenXAxis]))
-        .attr("cy", d => yLinearScale(d.healthcare))
+        .attr("cy", d => yLinearScale(d.num_hits))
         .attr("r", 20)
         .attr("fill", "pink")
         .attr("opacity", ".5");
 
-
+    // Create group for  2 x- axis labels
     var labelsGroup = chartGroup.append("g")
         .attr("transform", `translate(${width / 2}, ${height + 20})`);
 
-
-
-    var incomeLengthLabel = labelsGroup.append("text")
+    var hairLengthLabel = labelsGroup.append("text")
         .attr("x", 0)
         .attr("y", 20)
-        .attr("value", "income")
+        .attr("value", "hair_length") // value to grab for event listener
         .classed("active", true)
-        .text("income level ");
+        .text("Hair Metal Ban Hair Length (inches)");
 
-
-    var povertyLable = labelsGroup.append("text")
+    var albumsLabel = labelsGroup.append("text")
         .attr("x", 0)
         .attr("y", 40)
-        .attr("value", "poverty")
+        .attr("value", "num_albums") // value to grab for event listener
         .classed("inactive", true)
-        .text("poverty");
+        .text("# of Albums Released");
 
+    // append y axis
     chartGroup.append("text")
         .attr("transform", "rotate(-90)")
         .attr("y", 0 - margin.left)
         .attr("x", 0 - (height / 2))
         .attr("dy", "1em")
         .classed("axis-text", true)
-        .text("heathcare");
+        .text("Number of Billboard 500 Hits");
 
+    // updateToolTip function above csv import
+    var circlesGroup = updateToolTip(chosenXAxis, circlesGroup);
+
+    // x axis labels event listener
     labelsGroup.selectAll("text")
         .on("click", function () {
             // get value of selection
@@ -160,11 +176,11 @@ d3.csv("./assets/data/data.csv").then(function (chartdata) {
                 // replaces chosenXAxis with value
                 chosenXAxis = value;
 
-                console.log(chosenXAxis)
+                // console.log(chosenXAxis)
 
                 // functions here found above csv import
                 // updates x scale for new data
-                xLinearScale = xScale(chartdata, chosenXAxis);
+                xLinearScale = xScale(hairData, chosenXAxis);
 
                 // updates x axis with transition
                 xAxis = renderAxes(xLinearScale, xAxis);
@@ -176,44 +192,22 @@ d3.csv("./assets/data/data.csv").then(function (chartdata) {
                 circlesGroup = updateToolTip(chosenXAxis, circlesGroup);
 
                 // changes classes to change bold text
-                if (chosenXAxis === "income") {
-                    incomeLengthLabel
+                if (chosenXAxis === "num_albums") {
+                    albumsLabel
                         .classed("active", true)
                         .classed("inactive", false);
-                    povertyLable
+                    hairLengthLabel
                         .classed("active", false)
                         .classed("inactive", true);
                 }
                 else {
-                    incomeLengthLabel
+                    albumsLabel
                         .classed("active", false)
                         .classed("inactive", true);
-                    povertyLable
+                    hairLengthLabel
                         .classed("active", true)
                         .classed("inactive", false);
                 }
             }
         });
-
-
-
-
-
-
-
-
-
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
+});
