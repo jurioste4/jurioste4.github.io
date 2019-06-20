@@ -9,6 +9,14 @@
     color: rgb(53, 40, 40);
 }
 
+#left {
+    float: left;
+}
+
+#right {
+    float: right;
+}
+
 body {
     background-color: rgb(50, 255, 245);
 }
@@ -106,7 +114,7 @@ body {
 /************* Style and animate the nav overlay ***********************/
 
 .main-nav-list::before, .main-nav-list::after {
-    background-color: #f32400;
+    background-color: transparent;
     content: "";
     position: absolute;
     top: 0;
@@ -124,7 +132,7 @@ body {
 }
 
 .main-nav-list ul {
-    background-color: #f32400;
+    background-color: #0aff99;
     position: absolute;
     top: -30%;
     left: 50%;
