@@ -13,6 +13,14 @@
     float: left;
 }
 
+a:link {
+    /* unvisited link */
+    text-decoration: underline;
+    font-weight: none;
+    font-size: 20px;
+    color: rgb(179, 102, 252);
+}
+
 #right {
     float: right;
 }
