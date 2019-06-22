@@ -16,7 +16,7 @@ body.lb-disable-scrolling {
 .lightbox {
   position: relative;
   left: 0;
-  width: 30%;
+  width: 35%;
   z-index: 1000;
   text-align: center;
   line-height: 0;
