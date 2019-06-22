@@ -8,6 +8,7 @@
     <!-- <link rel="stylesheet" href="reset.css">  -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="lightbox.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -63,20 +64,25 @@
                     creating an interactive dashboard to exploring belly button Biodiversity :
                     <a href="http://robdunnlab.com/projects/belly-button-biodiversity/" target="_blank">Belly button
                         Biodiversity</a> data set. Data set was stored in db
-                    folder bellybutton.sqlite
-                    I used Python flask app.py: using SQAlchemy flask to connect and display the data
-                    I then created used JavaScript located in file folder static / js/ app.js
-                    I used Plotly.js and some D3 to create the plots and dropdown menu
-                    click link above for more detale and the code
+                    folder bellybutton.sqlite. I used a python flask app to display the information in json form
+                    created an interactive pie chart that changes based on the data
 
                 </p>
-                <li><strong> Peer-To-Peer Ridesharing Analysis :</strong> <a
-                        href="https://github.com/jurioste4/homework/tree/master/Matplot_homework"
-                        target="_blank">Matplot </a></li>
+
+                <a href="https://visual-jurioste4.herokuapp.com/" target="_blank">
+                    <img src="../image/piechart.jpg" alt="belly button Biodiversity" class="lightbox">
+                </a>
+
+                <li><a href="https://github.com/jurioste4/homework/tree/master/Matplot_homework"
+                        target="_blank">Peer-To-Peer Ridesharing Analysis : Github </a></li>
+
                 <p>The car sharing analysis was done using two csv files from Lyft and Uber with data regarding
                     their drivers and historic custmer data: including details in the form of city, driver count and
                     individual fares. Readme.md has all information
                     in the project Finished_pyber.ipynb is the file
+                    <img src="../image/ride_sharing_scatter.jpg" alt="piechart" class="lightbox">
+
+
                 </p>
                 <li><strong>Heroes of Pymoli Analysis:</strong> <a
                         href="https://github.com/jurioste4/homework/blob/master/Python_mmo">MMO project</a></li>
@@ -102,6 +108,7 @@
     </div>
 
     <script src="nav.js" async defer></script>
+    <script src="lightbox.js"></script>
 </body>
 
 </html>
