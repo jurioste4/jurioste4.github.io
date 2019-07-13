@@ -1,31 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Citi Bike Analytics</title>
 
-    <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
-    <script type="text/javascript">
-        function initViz() {
-            var containerDiv = document.getElementById("vizContainer"),
-                url = "http://public.tableau.com/views/Citydata_map/Story1",
-                options = {
-                    hideTabs: true,
-                    onFirstInteractive: function () {
-                        console.log("Run this code when the viz has finished loading.");
-                    }
-                };
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <link rel="stylesheet" href="reset.css">  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+    <title>Jerome Urioste</title>
 
-            var viz = new tableau.Viz(containerDiv, url, options);
-            // Create a viz object and embed it in the container div.
-        }
-    </script>
+
+
+    <!-- <link rel="stylesheet" type="text/css" href="reset.css"> -->
 </head>
 
-<body onload="initViz();">
-    <div id="vizContainer" style="width:1400px; height:700px;"></div>
+<body>
+    <div class="wrapper active-element">
+        <header class="main-header">
+            <nav>
+                <div class="masthead active-element">
+                    <h1><a href="#0">Jerome Urioste</a></h1>
+                    <div id="menu-toggle" class="menu-toggle active-element">
+                        <div class="one"></div>
+                        <div class="two"></div>
+                        <div class="three"></div>
+                    </div>
+                </div>
+                <div class="main-nav-list active-element">
+                    <ul>
+                        <li><a href="pprojects.html">python Projects</a></li>
+                        <li><a href="wprojects.html">web Projects</a></li>
+                        <li><a href="tableau.html" target="_blank">Tableau</a></li>
+                        <li><a href="jobh.html" class="active-link">Job History</a></li>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="main-contents">
+            <h2>Tableau</h2>
+            <li><strong>City Bike NYC Analysis</strong></li>
+
+            <li><strong>Project</strong> <a href="https://github.com/jurioste4/tableau">GitHub</a></li>
+
+            <p>This was an Analysis of data coming from New York City Bike Program: https://www.citibikenyc.com/ the
+                Data was downloaded from https://www.citibikenyc.com/system-data My analysis was done on the month
+                of July , August
+                , September
+                I used Tableau Public below is my Analysis.
+            </p>
+
+            <div class='tableauPlaceholder' id='viz1563038512061' style='position: relative'><noscript><a
+                        href='https:&#47;&#47;jurioste4.github.io&#47;html_pages&#47;tableau.html'><img alt=' '
+                            src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ci&#47;Citydata_map&#47;Story1&#47;1_rss.png'
+                            style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='Citydata_map&#47;Story1' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image'
+                        value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ci&#47;Citydata_map&#47;Story1&#47;1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' /></object></div>
+            <script
+                type='text/javascript'>                    var divElement = document.getElementById('viz1563038512061'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+
+
+
+
+
+        </main>
+
+    </div>
+
+    <script src="nav.js" async defer></script>
 </body>
 
 </html>
-
-BACK TO TOP
