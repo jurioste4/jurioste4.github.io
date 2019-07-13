@@ -2,24 +2,23 @@
 
 
 
-## Latitude - Latitude Analysis Dashboard with Attitude
-I built this website using data and work that was done with the project 
-https://github.com/jurioste4/Python_api_homework/blob/master/api_weather/my_code/WeatherPy.ipynb
+## Web Visualization Dashboard 
+Here I was tasked with createing a Visualization Dashboard for my weather API analisys see git hub here : https://github.com/jurioste4/Python_api_homework
 
-This website I took the plots and image from my python project with Link to that above 
-I Used HTML/CSS and some JavaScript as well as bootstrap
-Main website is index.html with each graph getting a page 
-Humidity.html, maxtemp.html, cloudiness.html and testcon.html
-All are linked from the main web page.
+I used HTML/CSS D3 and some javaScript 
+ 
+ so I used images from the plots that were created to evaulate 
+ windspeed.png vs Latitude 
+ ![Images/windspeed.png](Images/windspeed.png)
+ 
+ so I created 7 total pages one for each graph 
+ maxtemp, humidity cloudness , and a page to compair all of the graphs . 
 
-I created a python scrip located in ##convert_CSV_HTML.ipynb to convert ##cities.csv under resources from csv to html.
-Resulting in convertcsv.htm 
-Can see the table under data nav bar button.
+Last I was tasked with createing a homepage: 
 
-I used Visual studio code to create the site   https://jurioste4.github.io/weather/index.html
-Thank you for your time 
-
-
+![Images/webpage.png](Images/webpage.png)
+ 
+ 
 
 
 
