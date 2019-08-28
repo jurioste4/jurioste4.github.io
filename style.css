@@ -83,7 +83,16 @@ body {
     text-transform: uppercase;
 }
 
-.main-contents p {
+.main-contents p , #project ul{
+    font-size: 1.1rem;
+    letter-spacing: 1.7px;
+    line-height: 1.35;
+    color: rgb(0, 0, 0);
+    transition-delay: 150ms;
+    transition-duration: 850ms;
+}
+
+#project li {
     font-size: 1.1rem;
     letter-spacing: 1.7px;
     line-height: 1.35;
