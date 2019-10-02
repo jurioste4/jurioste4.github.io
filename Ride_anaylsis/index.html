@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Ride Shairing Analysis </title>
+</head>
+<body>
+   <div class="container">
+        <nav>
+            <a href="../index.html">Portfolio</a>
+             <!-- <a href="">second</a>
+            <a href="">third</a> -->
+             <a href="https://github.com/jurioste4/Ride_Analysis" target="_blank">Ride Shairing Github</a>
+        </nav>
+        <header class ="header">
+            <h1>Ride Shairing Analysis</h1>
+        </header>
+        
+    
+    </div>
+    <main class="main-contents">
+        <h2 align="center" class="intro">The data </h2>
+        <p class="discription" style="font-size: 30px">&emsp;
+            This ride sharing analysis was done with data used from both Lyft and Uber the data is from 2018 
+            and has rides with city active driver and historic rides with city and driver count with individual fares and city type.
+
+        </p>
+                
+        
+        <h1 class="frame" align="center">Bubble plot Average Fare vs Total Rides</h1>
+                
+         <iframe src="pages/bubble_plot.html" id="graph" name="targetframe" allowTransparency="true" scrolling="no" frameborder="4" height="650" width="1050" align="left">
+         </iframe>
+
+         <p class="iframe" align="right" style = "font-family:georgia,garamond,serif;font-size:30px;">This bubble plot with average fare for the y axis and Total rides for x axis 
+             separated by city type with bubble size being total drivers.
+                What I found interesting is Rural cities have a higher average fare but lower total drivers and total rides. 
+                And Urban cities have a higher total rides more drivers but the average fare is lower .  
+            
+                
+    
+            </p>
+
+            <h1 class="iframe2" align="center">Pie charts: Total far and total rides by city type</h1>
+            <p class="frame2" align="center" style = "font-family:georgia,garamond,serif;font-size:30px;">One Pie Graph Is total fare by city type the second graph is total rides by city type.
+                This data is from 2018 and it Shows  that Urban cities has over 62.7% of the fair when comparing the other two city types. 
+                 Which the increase is due to Urban having  over 68.4% of the other ride types. 
+
+         <iframe src="pages/pie_ride.html" id="pie2" name="targetframe" allowTransparency="true" scrolling="no" frameborder="4" height="700" width="700" align="left">
+         </iframe>
+
+         <iframe src="pages/pie.html" id="pie1" name="targetframe" allowTransparency="true" scrolling="no" frameborder="4" height="700" width="700" align="right">
+         </iframe>
+            
+                
+    
+            </p>
+
+
+
+        
+
+
+    </main>
+</body>
+
+
+</html>
