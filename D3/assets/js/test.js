@@ -122,10 +122,10 @@ function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup) {
     console.log('ylabel is:  ', ylabel);
   
     var toolTip = d3.tip()
-      .attr("class", "d3-tip")
+      .attr("class", "toolTip")
       .offset([0, 0])
       .html(function(d) {
-        return (`<center>${d.abbr}<br>${xlabel} ${d[chosenXAxis]}<br>${ylabel} ${d[chosenYAxis]}</center>`);              
+      return (`<center>${d.state}<br>${xlabel} ${xprefix}${d[chosenXAxis]}${xsuffix}<br>${ylabel} ${d[chosenYAxis]}${ysuffix}`);              
       });
     console.log('tool tip processed properly');
   
@@ -140,7 +140,7 @@ function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup) {
       });
     console.log('circles group - tool tip', circlesGroup);
     return circlesGroup;
-  }
+}
   
 
 
@@ -366,9 +366,9 @@ d3.csv("./assets/data/data.csv").then(function(usData) {
         }
     });
     
-    circlesGroup = updateToolTip(chosenXAxis, chosenYAxis, circlesGroup); 
+    circlesGroup = updateToolTip(chosenXAxis, chosenYAxis, circlesGroup);                    
+});                            
         
-});
 
 
 

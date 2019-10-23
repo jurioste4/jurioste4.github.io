@@ -1,3 +1,4 @@
+
 var svgWidth = 960;
 var svgHeight = 500;
 
@@ -13,8 +14,7 @@ var height = svgHeight - margin.top - margin.bottom;
 
 // Create an SVG wrapper, append an SVG group that will hold our chart,
 // and shift the latter by left and top margins.
-var svg = d3
-  .select("#scatter")
+var svg = d3.select("#scatter")
   .append("svg")
   .attr("width", svgWidth)
   .attr("height", svgHeight);
@@ -28,28 +28,28 @@ var chosenXAxis = "poverty";
 var chosenYAxis = "healthcare";
 
 // function used for updating x-scale var upon click on axis label                     
-function xScale(rawData, chosenXAxis) {
+function xyScale(rawData, chosenAxis) {
   // create scales
-  var xLinearScale = d3.scaleLinear()
-    .domain([d3.min(rawData, d => d[chosenXAxis]),
-      d3.max(rawData, d => d[chosenXAxis])
+  var xyLinearScale = d3.scaleLinear()
+    .domain([d3.min(rawData, d => d[chosenAxis]),
+      d3.max(rawData, d => d[chosenAxis])
     ])
     .range([0, width]);
-  console.log(xLinearScale);
-  return xLinearScale;
+  console.log(xyLinearScale);
+  return xyLinearScale;
 };
 
 // function used for updating y-scale var upon click on axis label                     
-function yScale(rawData, chosenYAxis) {
-  // create scales
-  var yLinearScale = d3.scaleLinear()
-    .domain([d3.min(rawData, d => d[chosenYAxis]),
-      d3.max(rawData, d => d[chosenYAxis])
-    ])
-    .range([height, 0]);
-  console.log(yLinearScale);
-  return yLinearScale;
-};
+// function yScale(rawData, chosenYAxis) {
+//   // create scales
+//   var yLinearScale = d3.scaleLinear()
+//     .domain([d3.min(rawData, d => d[chosenYAxis]),
+//       d3.max(rawData, d => d[chosenYAxis])
+//     ])
+//     .range([height, 0]);
+//   console.log(yLinearScale);
+//   return yLinearScale;
+// };
 
 // function used for updating xAxis var upon click on axis label                     
 function renderXAxis(newXScale, xAxis) {                                             
@@ -72,27 +72,42 @@ function renderYAxis(newYScale, yAxis) {
 
 // function used for updating circles group with a transition to
 // new circles
-function renderXCircles(circlesGroup, newScale, newAxis) {
-  circlesGroup.selectAll("circle").transition()
+function renderCircles(circlesGroup, newScale, chosenAxis, switchaxis) {
+ 
+  var circlesTags = circlesGroup.selectAll("circle");
+  var circlesText = circlesGroup.selectAll("text");
+
+  switch (switchaxis) {
+    case "x":
+    
+
+  }
+ 
+ 
+ 
+ 
+ 
+  circlesTags.transition()
     .duration(1000)
-    .attr("cx", d => newScale(d[newAxis]));
-  circlesGroup.selectAll("text").transition()
+    .attr("cx", d => newScale(d[chosenAxis]));
+  
+  circlesText.transition()
     .duration(1000)
-    .attr("x", d => newScale(d[newAxis]));
+    .attr("x", d => newScale(d[chosenAxis]));
   console.log(circlesGroup);
   return circlesGroup;
 };
 
-function renderYCircles(circlesGroup, newScale, newAxis) {
-  circlesGroup.selectAll("circle").transition()
-    .duration(1000)
-    .attr("cy", d => newScale(d[newAxis]));
-  circlesGroup.selectAll("text").transition()
-    .duration(1000)
-    .attr("y", d => newScale(d[newAxis]));
-  console.log(circlesGroup);
-  return circlesGroup;
-};
+// function renderYCircles(circlesGroup, newScale, newAxis) {
+//   circlesGroup.selectAll("circle").transition()
+//     .duration(1000)
+//     .attr("cy", d => newScale(d[newAxis]));
+//   circlesGroup.selectAll("text").transition()
+//     .duration(1000)
+//     .attr("y", d => newScale(d[newAxis]));
+//   console.log(circlesGroup);
+//   return circlesGroup;
+// };
 // function used for updating circles group with new tooltip
 // Update the label displayed on the tool tip                                        
 function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup) {
@@ -192,7 +207,7 @@ d3.csv("./assets/data/data.csv").then(function(rawData) {
     .attr("r", "12")
     .attr("cx", data =>xLinearScale(data[chosenXAxis]))
     .attr("cy", data =>yLinearScale(data[chosenYAxis]))
-    .attr("fill", "pink")
+    .attr("fill", "lightblue")
     .attr("opacity", "05");
   circlesGroup.append("text").text(function(d){
     return d.abbr;
@@ -379,4 +394,4 @@ d3.csv("./assets/data/data.csv").then(function(rawData) {
 
    // updates tooltips with new info
    circlesGroup = updateToolTip(chosenXAxis, chosenYAxis, circlesGroup);                    
-});                                                  
+});                                                 
