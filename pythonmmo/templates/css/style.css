@@ -1,6 +1,6 @@
 body {
   font: normal 300 18px "Roboto", sans-serif;
-  background: url("/templates/css/image/background.jpg") no-repeat center center fixed;
+  background: url("/pythonmmo/templates/css/image/background.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
  -moz-background-size: cover;
  -o-background-size: cover;

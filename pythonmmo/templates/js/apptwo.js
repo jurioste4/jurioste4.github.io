@@ -1,4 +1,4 @@
-const margin = 80;
+const margin = 100;
 const width = 600 - 2 * margin;
 const height = 500 - 2 * margin;
 
@@ -17,7 +17,7 @@ const svg = d3.select("svg")
 //   .attr('transform', `translate(${margin}, ${margin})`);
 
 
-d3.csv("/Resources/bar_df.csv", function (error, data) {
+d3.csv("/pythonmmo/Resources/bar_df.csv", function (error, data) {
   if (error) throw error;
 
   data.forEach(function (d) {

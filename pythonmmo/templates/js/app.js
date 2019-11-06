@@ -21,7 +21,7 @@ const svg = d3.select("svg")
 //   .attr('transform', `translate(${margin}, ${margin})`);
 
 
-d3.csv("/Resources/ageplot.csv", function (error, data) {
+d3.csv("/pythonmmo/Resources/ageplot.csv", function (error, data) {
   if (error) throw error;
 
   data.forEach(function (d) {

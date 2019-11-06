@@ -1,4 +1,4 @@
-d3.csv("/Resources/gender.csv", function ( data){
+d3.csv("/pythonmmo/Resources/gender.csv", function ( data){
     
     // console.log(data);
 
