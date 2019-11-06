@@ -1,0 +1,149 @@
+body {
+  font: normal 300 18px "Roboto", sans-serif;
+  background: url("/templates/css/image/background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+}
+div.row {
+  position: relative;
+}
+#graphtwo {
+  margin-top: -3%;
+  margin-right: 11%;
+}
+#areatwo {
+  position: relative;
+  margin-top: -8%;
+  
+  margin-left: 10%;
+  
+}
+#area1 {
+  position: absolute;
+  margin-left: 10%;
+  margin-top: -4%;
+}
+.header {
+  height: 200px;
+  padding-top: 20px;
+  
+}
+.header h1 {
+  padding: 60px;
+  margin: 0;
+  color: #000;
+  text-align: center;
+  font-size: 45px
+}
+.main-contents {
+  flex: auto;
+}
+
+
+
+div#area3 {
+  margin-right: 10%;
+}
+
+p.main {
+  position: relative;
+  top: 20%;
+  text-align: center;
+  font-size: 35px;
+  margin: 25%;
+  margin-top: 5%;
+  margin-bottom: 13%;
+  background-color: black;
+  color: white;
+  border-style: solid;
+  border-width: 5px;
+  border-color: rgb(214, 116, 4);
+}
+div.col-lg-6 p.texttwo {
+  position: relative;
+  margin-top: -2%;
+  /* margin-right: 30%; */
+ 
+  text-align: center;
+  font-size: 28px;
+  /* margin-left: 40%; */
+  background-color: black;
+  color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: skyblue;
+}
+
+.footer {
+position: fixed;
+text-align: center;
+font-size: 20px;
+bottom: 0;
+color: white;
+width: 100%;
+
+height: 25px;
+
+background-color: rgb(0, 0, 0);
+
+}
+p.description {
+  position: relative;
+  margin-top: 2%;
+  margin-right: 30%;
+ 
+  text-align: center;
+  font-size: 30px;
+  margin-left: 30%;
+  background-color: black;
+  color: white;
+  border-style: solid;
+  border-width: 5px;
+  border-color: skyblue;
+}
+nav .header {
+  background-image: url("/image/Fantasy.jpg")
+}
+nav
+{
+    text-align: center;
+    background-color:transparent;
+    padding: 20px;
+}
+nav a
+{
+    font-size: 25px;
+    text-decoration: none;
+    color: #000000fa;
+    margin: 10px 50px 10px 50px;
+    transition: 0.3s;
+}
+nav a:hover
+{
+    font-size: 27.5px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    padding: 15px;
+    border-radius: 10px;
+
+}
+/* div.container{
+  margin-top: -2%;
+}
+
+.bar {
+  fill: orange;
+}
+
+.bar:hover {
+  fill: green;
+}
+
+.bartwo{
+  fill: red;
+}
+
+.bartwo:hover {
+  fill: blue; */
