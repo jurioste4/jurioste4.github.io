@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <div class="container">
+        <nav>
+            <a href="https://jurioste4.github.io">Portfolio</a>
+            <a href="https://github.com/jurioste4/myprojects/tree/master/web_app" target="_blank">Github Code</a>
+        </nav>
+    </div>
+
+</head>
+
+<body>
+    <header class="header">
+        <h1>A Countrys Report Card </h1>
+    </header>
+
+    <p class="main">I took the data form the EuroMonito international countries : https://www.euromonitor.com This
+        website has reports from 210 countries' economies and consumers. So this website will comparie 5 countries.
+        United states , France , United kingdom , singapore and China and I am comparing there inflation percentage ,
+        unemployment population , and GDP Growth percentage.
+        I took the data from 2014 to 2019.
+    </p>
+    </br>
+    </br>
+    </br>
+    {% for id in ids %}
+    <h3>{{id}}</h3>
+    <div id="{{id}}"></div>
+    {% endfor %}
+
+
+</body>
+
+
+<footer>
+    <link rel="stylesheet" href="../../static/styles/style.css" <!-- D3.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- Plotly.js -->
+    <!-- <script src="https://d14fo0winaifog.cloudfront.net/plotly-basic.js"></script> -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <!-- <script type="text/javascript">
+        var graph = {{ graphJSON | safe}};
+        Plotly.plot("graph-0", graph.data, graph.layout);
+    </script> -->
+    <script type="text/javascript">
+        var graph = {{ graphJSON | safe}};
+        var ids = {{ ids | safe}};
+
+        for (var i in graph) {
+            Plotly.plot(ids[i],
+                graph[i].data,
+                graph[i].layout || {});
+        }
+    </script>
+</footer>
+
+</html>

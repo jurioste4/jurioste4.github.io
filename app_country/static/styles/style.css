@@ -1,0 +1,64 @@
+body {
+    font: normal 300 18px "Roboto", sans-serif;
+    background: url("image/image.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+  }
+nav
+{
+    text-align: center;
+    background-color:transparent;
+    padding: 20px;
+    
+    
+
+}
+nav a
+{
+    font-size: 25px;
+    background-color:whitesmoke;
+    text-decoration: none;
+    color: #000000fa;
+    margin: 10px 50px 10px 50px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+nav a:hover
+{
+    font-size: 27.5px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    padding: 15px;
+    border-radius: 10px;
+
+}
+.header {
+    height: 200px;
+    padding: 20px;
+    background-color:transparent;
+    
+  }
+  .header h1 {
+    
+    
+    color: black;
+    text-align: center;
+    font-size: 45px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  p.main {
+    position: relative;
+   
+    font-size: 35px;
+   
+    background-color: black;
+    color: white;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(210, 166, 231);
+  }
