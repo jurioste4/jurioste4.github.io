@@ -46,10 +46,10 @@ function createFeatures(earthquakedata) {
 function createMap(earthquake) {
 
 
-    var streetmap = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
-        attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
+    var streetmap = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
         maxZoom: 18,
-        id: "mapbox.streets",
+        id: 'mapbox/streets-v11',
         accessToken: API_KEY
     });
 
@@ -142,7 +142,10 @@ function markerSize(mag) {
     return mag * 5;
 };
 
-
+$.getJSON('http://a.tiles.mapbox.com/v4/mapbox.streets/features.json?access_token=pk.eyJ1IjoianVyaW9zdGUyIiwiYSI6ImNraTl0eTJpdjAxMGUyeWw2MzAwYnJ5OTYifQ.xhgkx_MIPaic3Kp--gFX3w', function (data) {
+  var geojson = L.geoJson(data).addTo(map);
+  map.fitBounds(geojson.getBounds());
+});
 
 
 
