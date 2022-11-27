@@ -20,6 +20,13 @@
 body {
     background-color: rgb(50, 255, 245);
 }
+a:link {
+    /* unvisited link */
+    text-decoration: underline;
+    font-weight: none;
+    font-size: 20px;
+    color: rgb(179, 102, 252);
+}
 
 .wrapper {
     display: flex;
